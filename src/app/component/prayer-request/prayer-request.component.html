@@ -1,0 +1,74 @@
+<div data-aos="fade-up" data-aos-duration="2000">
+    <mat-card>
+        <div>
+            <div mat-card-avatar class="form-header-image"></div>
+        </div>
+        <!-- Title of an Card -->
+        <mat-card-title>
+            Prayer Request Form
+        </mat-card-title>
+        <mat-card-subtitle>
+            Please submit your request for prayer below.
+        </mat-card-subtitle>
+        <hr>
+        <mat-card-content>
+            <form class="prayerForm">
+                <table>
+                    <tr>
+                        <td>
+                            <mat-form-field class="form-full-width">
+                                <input matInput placeholder="First Name">
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="form-full-width">
+                                <input matInput placeholder="Last Name">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <mat-form-field class="form-full-width">
+                                <input matInput placeholder="Email">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <mat-form-field class="form-full-width">
+                                <mat-label>phone</mat-label>
+                                <span matPrefix>+91 &nbsp;</span>
+                                <input type="tel" matInput placeholder="555-555-1234">
+                                <mat-icon matSuffix>mode_edit</mat-icon>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <mat-form-field class="form-full-width">
+                                <input matInput [matDatepicker]="picker" placeholder="Requested Date">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker touchUi="true" #picker></mat-datepicker>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <mat-form-field class="form-full-width">
+                                <mat-label>Prayer Description</mat-label>
+                                <textarea class="textBox" matInput placeholder="Ex. I request this prayer for..."></textarea>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="content-center">
+                            <button mat-raised-button color="accent">Submit</button> |
+                            <button mat-raised-button color="accent">Clear</button> |
+                            <button mat-raised-button color="accent" (click)="back()">Back</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
